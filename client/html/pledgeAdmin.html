@@ -1,0 +1,28 @@
+<template name="pledgeAdmin">
+	<div class="container">
+		<table class="table table-condensed">
+			<thead>
+				<tr>
+					<th>Donor Name</th>
+					<th>Donor Email</th>
+					<th>Prizes</th>
+					<th>Date</th>
+				</tr>
+			</thead>
+			<tbody>
+				{{#each pledge}}
+				<tr>
+					<td>{{name}}</td>
+					<td>{{email}}</td>
+					<td>
+						{{#each prizes}}
+						{{prizeName}} - {{quantity}}<br />
+						{{/each}}
+					</td>
+					<td>{{createdAt}}</td>
+				</tr>
+				{{/each}}
+			</tbody>
+		</table>
+	</div>
+</template>

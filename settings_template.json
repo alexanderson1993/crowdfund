@@ -1,0 +1,23 @@
+{
+  "public" : {
+    "ga": {
+      "account":"Google Analytics",
+      "debug": true
+    },
+    "stripe": {
+      "publishable_key": "StripeKey"
+    }
+  },
+  "stripe": {
+    "secret_key": "StripeKey"
+  },
+ "email": {
+    "smtp":{
+      "username":"smtpusername",
+      "password":"smtppassword",
+      "server":"smtpserver"
+    },
+    "from": "noreply@website.org",
+    "notifyTo": ["me@email.com"]
+  }
+}

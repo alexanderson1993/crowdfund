@@ -1,0 +1,43 @@
+<template name="prizes">
+	<div class="wrapper">
+		<div class="container">
+			<div class="row">
+				{{#each prize}}
+				<div class="col-sm-12" id="prizes">
+					<div class="prize">
+						<div class="pull-right">
+							{{#if prizeFull ../_id}}
+							<small>All Gone!</small>
+							{{else}}
+							<input class="claim" type="checkbox" /> Claim this prize!
+							<div class="form-group"><label>Quantity:</label><input type="number" value="1" min="1" max={{maxPrize ../_id}} class="form-control prizeQuantity" /></div>
+							{{/if}}
+						</div>
+						<p class="price"><strong>${{price}} <small>USD</small></strong></p>
+						<p class="name">{{name}}</p>
+						<p class="description">{{description}}</p>
+						<p class="delivery">Estimated Delivery: <strong>{{delivery}}</strong></p>
+						<p><em><strong>{{prizeBackers ../_id}}</strong> {{#if quantity}}out of {{quantity}} {{/if}}claimed</em></p>
+
+					</div>
+				</div>
+				{{/each}}
+			</div>
+		</div>
+	</div>
+	<footer class="prizeTotal">
+		<div class="container">
+			<h3 class="col-sm-8">Total Pledge: ${{pledgeAmount}}</h3>
+			<div class="col-sm-4">
+				<button class="make-pledge btn-block btn btn-success btn-lg" type="button" disabled={{buttonDisabled}}>Make Pledge</button>
+			</div>
+		</div>
+	</footer>
+	<div class="modal fade" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
+		<div class="modal-dialog">
+			<div class="modal-content container-fluid">
+				{{> payment}}
+			</div>
+		</div>
+	</div>
+</template>

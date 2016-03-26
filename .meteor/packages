@@ -1,0 +1,43 @@
+# Meteor packages used by this project, one per line.
+# Check this file (and the other files in this directory) into your repository.
+#
+# 'meteor add' and 'meteor remove' will edit this file for you,
+# but you can also edit it by hand.
+
+meteor-platform
+less
+email
+force-ssl
+
+twbs:bootstrap
+fortawesome:fontawesome
+alanning:roles
+iron:router
+#yogiben:admin
+#yogiben:admin-settings
+aldeed:simple-schema
+cfs:standard-packages
+cfs:gridfs
+cfs:autoform
+#backer-tracker
+momentjs:moment
+useraccounts:bootstrap
+accounts-facebook
+service-configuration
+accounts-ui
+datariot:ganalytics
+meteorhacks:fast-render
+
+mirrorcell:card
+infinitedg:stripe
+accounts-google
+cmather:handlebars-server
+#lookback:seo
+spiderable
+
+aldeed:collection2
+aldeed:template-extension
+raix:handlebar-helpers
+accounts-password
+manuelschoebel:ms-seo
+admin

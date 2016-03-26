@@ -1,0 +1,41 @@
+<head>
+	<title>Save the Space Center Fundraiser</title>
+	<meta name="apple-mobile-web-app-title" content="STSC">
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="default">
+	<meta name="fragment" content="!"> <!-- For Spiderable -->
+	<link rel="apple-touch-icon" href="/icon.png">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+</head>
+
+<body>
+</body>
+
+<template name="layout-empty">
+	<style>
+		body{
+			background-image: url(/background.jpg);
+			background-size: auto 100vh;
+			background-position: 50% 0;
+			overflow: hidden;
+			background-repeat: no-repeat;
+			background-color: black;
+		}
+		body *{
+			display:none;
+		}
+	</style>
+</template>
+
+<template name="layout">
+	<header>
+		{{#if name}}
+		<h1 class="text-center"><a href="/">{{name}}</a></h1>
+		<h4 class="text-center">Sponsored by {{sponsor}}</h4>
+		{{/if}}
+		<span class="pull-right">
+			{{> atNavButton}}
+		</span>
+	</header>
+	{{>yield}}
+</template>
